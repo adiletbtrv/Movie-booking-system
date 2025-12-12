@@ -28,7 +28,7 @@
 
 ---
 
-## Table of Contents
+## 📑 Table of Contents
 1. [Project Overview](#-project-overview)
 2. [Functionalities](#-functionalities)
 3. [Tech Stack](#-tech-stack)
@@ -40,12 +40,12 @@
 ---
 
 ## Project Overview
-Cinema Enterprise Booking is a comprehensive solution for managing movie theater operations. It bridges the gap between web-based user convenience and desktop-based administration.
+Cinema Enterprise Booking is a comprehensive solution for managing movie theater operations. It demonstrates a **Hybrid Architecture** where the same web core serves both online users and terminal kiosks via a native wrapper.
 
 **Key Highlights:**
-* **Hybrid Platform:** Accessible via Web Browser and Native Desktop Application.
+* **Hybrid Platform:** Web version for remote access + **JavaFX Desktop** version for ticket counters.
+* **Java-JS Bridge:** Implemented a custom bridge to stream React logs directly into the Java System Console for debugging.
 * **Security:** Robust authentication using JWT (JSON Web Tokens) and BCrypt hashing.
-* **Real-time Updates:** Instant seat availability checks and booking management.
 
 ---
 
@@ -62,9 +62,9 @@ The project implements three core operational tasks:
 * **Screening Management:** Scheduling movie sessions for specific halls and times.
 * **Analytics:** Real-time dashboard showing Total Revenue, Tickets Sold, and Active Movies.
 
-### 3. Desktop Client (Java Swing)
-* A native wrapper that encapsulates the web interface into a **Java Swing** `JFrame`.
-* System integration including custom taskbar icons and resource loading.
+### 3. Desktop Client (JavaFX)
+* A native application built with **JavaFX** and **WebView**.
+* It encapsulates the React application, providing a native look and feel with custom application icons and window management.
 
 ---
 
@@ -72,19 +72,17 @@ The project implements three core operational tasks:
 
 ### Backend
 * **Framework:** Spring Boot 3 (Web, Security, Data JPA).
-* **Database:** MySQL (Production) / H2 (Test).
+* **Database:** MySQL (Production).
 * **Security:** Spring Security + JWT Filter.
-* **API:** RESTful Architecture.
 
 ### Frontend
 * **Library:** React 18 + TypeScript.
 * **Styling:** Tailwind CSS (Dark Mode Cinema Theme).
-* **Routing:** React Router DOM v6.
 * **Build Tool:** Vite.
 
 ### Desktop
-* **Core:** Java Swing (`JFrame`, `Toolkit`).
-* **Integration:** Embedded Browser component.
+* **Core:** JavaFX (`Stage`, `Scene`, `WebView`, `WebEngine`).
+* **Integration:** Custom `JavaConsoleBridge` for logging and bidirectional communication.
 
 ---
 
@@ -93,42 +91,41 @@ This project demonstrates the practical application of core Computer Science con
 
 ### Data Structures
 1.  **ArrayList / List:**
-    * Used extensively for dynamic lists (e.g., `List<Movie>`, `List<Screening>`).
-    * Chosen for $O(1)$ access time by index and efficient iteration.
+    * Used extensively for dynamic lists (e.g., `List<Movie>`).
+    * Chosen for $O(1)$ access time by index.
 2.  **HashMap / Map:**
-    * Utilized in `JwtService` to handle token claims (Key-Value pairs for user data).
-    * Used for mapping DTOs to Entity objects efficiently.
+    * Utilized in `JwtService` to handle token claims (Key-Value pairs).
 3.  **Set (HashSet):**
-    * Used for storing User Roles (`Role`) to ensure unique privileges (no duplicate roles).
+    * Used for storing User Roles (`Role`) to ensure unique privileges.
 4.  **Optional:**
-    * Applied in Repository layers to handle potential `null` values safely, preventing NullPointerExceptions.
+    * Applied in Repository layers to handle `null` values safely.
 
 ### Algorithms
 1.  **Sorting:**
-    * Implemented a custom comparator to sort user tickets by date (Newest First):
-      `tickets.sort((a, b) -> new Date(b.startTime).getTime() - new Date(a.startTime).getTime())`
+    * Custom comparator to sort user tickets by date (Newest First):
+        `tickets.sort((a, b) -> new Date(b.startTime).getTime() - new Date(a.startTime).getTime())`
 2.  **Hashing:**
-    * **BCrypt Algorithm:** Used for secure, salted password hashing before database storage.
-    * **HMAC SHA-256:** Used for signing and verifying JSON Web Tokens.
+    * **BCrypt Algorithm:** Secure, salted password hashing.
+    * **HMAC SHA-256:** Signing JSON Web Tokens.
 3.  **Filtering:**
-    * Java Stream API is used to filter active screenings based on Movie ID.
-4.  **Complexity Analysis:**
-    * Ticket Lookup: $O(N)$ (or $O(\log N)$ with DB indexing).
-    * Seat Booking: $O(1)$ constant time operations.
+    * Java Stream API used to filter active screenings by Movie ID.
 
 ---
 
 ## File Handling & Database
 
 ### Database (Relational Model)
-All persistent data (Users, Movies, Tickets, Halls) is stored in a relational **MySQL** database.
-* **Hibernate ORM:** Maps Java classes to database tables.
-* **Initialization:** SQL scripts (`V1__init_movies.sql`) are executed at startup to populate the initial database state.
+All persistent data is stored in a relational **MySQL** database using **Hibernate ORM**.
 
 ### File Handling (Input/Output)
-File handling techniques are used for configuration and resource management:
-1.  **Resource Loading (IO):** The Desktop Client uses `ClassLoader.getResource()` to read the `icon.png` file from the JAR archive's internal structure to set the application window icon.
-2.  **Configuration Parsing:** The application reads and parses the `application.yml` file using File Input Streams to configure database connections and server ports.
+File handling is critically used in the Desktop Module and Configuration:
+1.  **Resource Loading (JavaFX Image I/O):**
+    The application utilizes `getClass().getResource("/icon.png")` to perform file I/O operations. It reads the binary image stream from the JAR classpath and converts it into a JavaFX `Image` object to set the stage icon:
+    ```java
+    primaryStage.getIcons().add(new Image(iconURL.toExternalForm()));
+    ```
+2.  **Configuration Parsing:** Spring Boot reads `application.yml` via File Input Streams.
+3.  **SQL Migrations:** The system reads `.sql` files from the disk to initialize the schema.
 
 ---
 
