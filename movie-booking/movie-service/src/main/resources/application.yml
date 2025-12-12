@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: movie-service
+  datasource:
+    url: jdbc:postgresql://localhost:5433/cinema_db
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+tmdb:
+  api-key: 56b9ae0a0d68f267ca7bbe202fdcaaa8
+  base-url: https://api.themoviedb.org/3

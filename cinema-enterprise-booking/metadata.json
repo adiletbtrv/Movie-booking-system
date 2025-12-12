@@ -1,0 +1,5 @@
+{
+  "name": "Cinema Enterprise Booking",
+  "description": "A comprehensive cinema booking system featuring seat selection, movie catalog, and administrative dashboard.",
+  "requestFramePermissions": []
+}
