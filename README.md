@@ -6,8 +6,6 @@
 ![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-> **A Full-Stack Cinema Booking Application** built with a Microservice-ready Backend, a modern React Frontend, and a Java Swing Desktop Client wrapper.
-
 ## Screenshots
 
 <img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/0bb4af7d-6827-4db1-b927-9c424e60365e" />
