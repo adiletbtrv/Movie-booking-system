@@ -8,6 +8,24 @@
 
 > **A Full-Stack Cinema Booking Application** built with a Microservice-ready Backend, a modern React Frontend, and a Java Swing Desktop Client wrapper.
 
+## Screenshots
+
+<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/0bb4af7d-6827-4db1-b927-9c424e60365e" />
+
+<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/d0d63fbd-2c26-474c-98b8-e0842148c7c8" />
+
+<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/5474b1d8-a8b7-483e-9a2a-d76fcfa82649" />
+
+<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/0e25b619-acb9-42c6-9511-7d7ec9b67915" />
+
+<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/93f58177-e6de-409d-bd68-f8d739f087f5" />
+
+<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/4ee9ce8c-340b-44f9-98fb-b72d220fb1c9" />
+
+<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/43ff41d4-1f7d-4f7f-a4c7-629318852414" />
+
+<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/9b9cb62f-25d8-4949-b8a9-313bd1a98f42" />
+
 ---
 
 ## Table of Contents
@@ -144,24 +162,6 @@ java -jar target/desktop-client-1.0.jar
 ## Video Demo
 
     [Insert your Video Link Here]
-
-## Screenshots
-
-<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/0bb4af7d-6827-4db1-b927-9c424e60365e" />
-
-<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/d0d63fbd-2c26-474c-98b8-e0842148c7c8" />
-
-<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/5474b1d8-a8b7-483e-9a2a-d76fcfa82649" />
-
-<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/0e25b619-acb9-42c6-9511-7d7ec9b67915" />
-
-<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/93f58177-e6de-409d-bd68-f8d739f087f5" />
-
-<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/4ee9ce8c-340b-44f9-98fb-b72d220fb1c9" />
-
-<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/43ff41d4-1f7d-4f7f-a4c7-629318852414" />
-
-<img width="2560" height="1080" alt="image" src="https://github.com/user-attachments/assets/9b9cb62f-25d8-4949-b8a9-313bd1a98f42" />
 
 ## Author
 
