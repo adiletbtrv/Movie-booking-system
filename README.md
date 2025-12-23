@@ -38,7 +38,7 @@
 ---
 
 ## Project Overview
-Cinema Enterprise Booking is a comprehensive solution for managing movie theater operations. It demonstrates a **Hybrid Architecture** where the same web core serves both online users and terminal kiosks via a native wrapper.
+Movie Booking System is a comprehensive solution for managing movie theater operations. It demonstrates a **Hybrid Architecture** where the same web core serves both online users and terminal kiosks via a native wrapper.
 
 **Key Highlights:**
 * **Hybrid Platform:** Web version for remote access + **JavaFX Desktop** version for ticket counters.
