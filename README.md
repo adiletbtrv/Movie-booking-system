@@ -26,17 +26,6 @@
 
 ---
 
-## 📑 Table of Contents
-1. [Project Overview](#-project-overview)
-2. [Functionalities](#-functionalities)
-3. [Tech Stack](#-tech-stack)
-4. [Algorithms & Data Structures](#-algorithms--data-structures)
-5. [File Handling & Database](#-file-handling--database)
-6. [Setup & Installation](#-setup--installation)
-7. [Video Demo](#-video-demo)
-
----
-
 ## Project Overview
 Movie Booking System is a comprehensive solution for managing movie theater operations. It demonstrates a **Hybrid Architecture** where the same web core serves both online users and terminal kiosks via a native wrapper.
 
@@ -153,10 +142,6 @@ cd movie-booking/desktop-client
 mvn package
 java -jar target/desktop-client-1.0.jar
 ```
-
-## Video Demo
-
-[https://drive.google.com/file/d/1N954j9qTpzz1JDFzPTAsl2AumQI0twSw/view?usp=sharing]
 
 ## Author
 
