@@ -28,21 +28,21 @@
 
 <div align="center">
   <img width="100%" alt="Cinema Catalog and Movie Details" src="https://github.com/user-attachments/assets/0bb4af7d-6827-4db1-b927-9c424e60365e" />
-  <p><em>Interactive movie catalog with dynamic search, rating filters, and showtime schedule browser.</em></p>
+  <p><em>Authorization page.</em></p>
 </div>
 
 <br/>
 
 <div align="center">
   <img width="100%" alt="Interactive Seat Booking Map" src="https://github.com/user-attachments/assets/d0d63fbd-2c26-474c-98b8-e0842148c7c8" />
-  <p><em>Real-time seat reservation matrix featuring VIP row pricing, multi-seat selection, and countdown hold timer.</em></p>
+  <p><em>Interactive movie catalog with dynamic search, rating filters, and showtime schedule browser.</em></p>
 </div>
 
 <br/>
 
 <div align="center">
   <img width="100%" alt="Admin Intelligence & Management Dashboard" src="https://github.com/user-attachments/assets/5474b1d8-a8b7-483e-9a2a-d76fcfa82649" />
-  <p><em>Executive analytics dashboard, automated TMDB API movie ingestion pipeline, and screening session management.</em></p>
+  <p><em>Real-time seat reservation matrix featuring VIP row pricing, multi-seat selection, and countdown hold timer.</em></p>
 </div>
 
 ---
